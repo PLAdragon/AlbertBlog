@@ -16,7 +16,6 @@
         delete from t_users where uid=#{uid}  
     </delete>  
       
-     <!-- mybsits_config中配置的alias类别名,也可直接配置resultType为类路劲 -->    
     <select id="findById" parameterType="int" resultType="Users">  
         select uid uid,username userame,password password from t_users where uid=#{uid}  
     </select>  

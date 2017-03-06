@@ -16,37 +16,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
-public class TestSupport extends AbstractJUnit4SpringContextTests {
-    protected static long startTime;
-    protected static long endTime;
-
-    /**
-     * 记录 开始运行时间
-     *
-     * @return
-     */
+public abstract class TestSupport extends AbstractJUnit4SpringContextTests {
+   
     @BeforeClass
     public static void start() {
-    	startTime = System.currentTimeMillis();
-        System.out.println("开始时间："+startTime);
+    	System.out.println("测试前置处理");
     }
 
-    /**
-     * 记录 结束运行时间
-     *
-     * @return
-     */
+   
     @AfterClass
     public static void end() {
-        endTime = System.currentTimeMillis();
-        System.out.println("耗时："+(endTime - startTime));
+    	System.out.println("测试后置处理");
     }
 
     /**
      * 输出记录
      */
     protected void log() {
-        String text = "\n开始时间 : " + this.startTime + "\n结束时间 : " + this.endTime + "\n执行时间 : " + (this.endTime - this.startTime);
-        logger.info(text);
+        logger.info("测试");
     }
 }

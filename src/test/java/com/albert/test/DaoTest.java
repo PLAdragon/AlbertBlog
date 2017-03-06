@@ -11,7 +11,7 @@ import com.albert.service.UserService;
 
 /** 
 * @ClassName: DaoTest 
-* @Description: 
+* @Description: 测试DAO层
 * @author albert
 * @date 2017年3月6日 下午7:50:36 
 *  
