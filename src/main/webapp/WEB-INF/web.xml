@@ -17,7 +17,8 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
     </listener>  
     <!-- Spring -->  
-  
+    
+   
     <!-- 配置Spring字符编码过滤器 -->  
     <filter>  
         <filter-name>encodingFilter</filter-name>  
@@ -65,22 +66,20 @@
     </servlet>  
     <servlet-mapping>  
         <servlet-name>dispatcher</servlet-name>  
-        <!-- 拦截所有/rest/* 的请求,交给DispatcherServlet处理,性能最好 -->  
-        <url-pattern>/rest/*</url-pattern>  
+        <!-- 拦截所有/web/* 的请求,交给DispatcherServlet处理,性能最好 -->  
+        <url-pattern>/web/*</url-pattern>  
     </servlet-mapping>  
-  
-    <!-- 首页 -->  
-    <welcome-file-list>  
-        <welcome-file>rest/index</welcome-file>  
-    </welcome-file-list>  
+  	<welcome-file-list>
+  	    <welcome-file>web/index</welcome-file>
+  	</welcome-file-list>
   
     <!-- 错误页 -->  
     <error-page>  
         <error-code>404</error-code>  
-        <location>/rest/page/404</location>  
+        <location>/web/404</location>  
     </error-page>  
     <error-page>  
         <error-code>500</error-code>  
-        <location>/rest/page/500</location>  
+        <location>/web/500</location>  
     </error-page>  
 </web-app>

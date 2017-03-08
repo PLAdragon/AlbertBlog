@@ -7,7 +7,6 @@ import org.junit.Test;
 import com.albert.TestSupport;
 import com.albert.dao.UserMapper;
 import com.albert.domain.table.Users;
-import com.albert.service.UserService;
 
 /** 
 * @ClassName: DaoTest 
@@ -22,6 +21,7 @@ public class DaoTest extends TestSupport{
 	@Test
 	public void test(){
 		Users u = userMapper.findById(1);
-		System.out.println(u);
+		logger.info("结果："+u);
+		
 	}
 }

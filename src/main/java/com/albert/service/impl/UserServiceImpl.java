@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.albert.service;
+package com.albert.service.impl;
 
 import javax.annotation.Resource;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.albert.dao.UserMapper;
 import com.albert.domain.table.Users;
+import com.albert.service.UserService;
 
 /** 
 * @ClassName: UserServiceImpl 
