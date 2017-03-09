@@ -21,10 +21,10 @@ import com.albert.controller.BaseController;
 public class CommonController extends BaseController {
 	@RequestMapping("/404")
 	public String error_404(HttpServletRequest request){
-		return "404";
+		return "comm/error_404";
 	}
 	@RequestMapping("/500")
 	public String error_500(HttpServletRequest request){
-		return "500";
+		return "comm/error_500";
 	}
 }

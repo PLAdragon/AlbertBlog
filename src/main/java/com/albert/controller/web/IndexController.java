@@ -21,7 +21,7 @@ public class IndexController extends BaseController {
 	@RequestMapping("/index")
 	public String index(Model model){
 		model.addAttribute("name", "张亚强");
-		return "web/index";
+		return "themes/default/header";
 	}
 	
 }

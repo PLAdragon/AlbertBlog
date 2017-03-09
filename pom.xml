@@ -30,6 +30,7 @@
 		<jackson-version>2.3.0</jackson-version>
 		<hibernate.validator.version>5.1.1.Final</hibernate.validator.version>
 		<jetbrick-template.version>2.1.3</jetbrick-template.version>
+		 <blade.version>1.7.1-beta</blade.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,6 +39,11 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>com.bladejava</groupId>
+            <artifactId>blade-core</artifactId>
+            <version>${blade.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
