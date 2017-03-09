@@ -231,17 +231,19 @@
 			<artifactId>jackson-annotations</artifactId>
 			<version>${jackson-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope> <!--打包时不包含 -->
+		</dependency>
 		
         <dependency>
 		    <groupId>com.github.subchen</groupId>
 		    <artifactId>jetbrick-template-springmvc</artifactId>
 		    <version>${jetbrick-template.version}</version>
 		</dependency>
-		<dependency>
-		    <groupId>com.github.subchen</groupId>
-		    <artifactId>jetbrick-template</artifactId>
-		    <version>${jetbrick-template.version}</version>
-		</dependency>		
+		
 	</dependencies>
 	<build>
 		<finalName>AlbertBlog</finalName>
