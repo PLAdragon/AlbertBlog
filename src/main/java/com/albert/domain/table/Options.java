@@ -1,27 +1,18 @@
 package com.albert.domain.table;
 
-//
 public class Options {
-
-
-    // 配置名称
     private String name;
 
-    // 配置值
     private String value;
 
-    // 配置描述
     private String description;
-
-    public Options() {
-    }
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getValue() {
@@ -29,7 +20,7 @@ public class Options {
     }
 
     public void setValue(String value) {
-        this.value = value;
+        this.value = value == null ? null : value.trim();
     }
 
     public String getDescription() {
@@ -37,6 +28,6 @@ public class Options {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description = description == null ? null : description.trim();
     }
 }

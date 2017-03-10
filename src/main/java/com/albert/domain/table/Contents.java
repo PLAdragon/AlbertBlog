@@ -1,59 +1,37 @@
 package com.albert.domain.table;
 
-//
-public class Contents  {
-
-
-    // post表主键
+public class Contents {
     private Integer cid;
 
-    // 内容标题
     private String title;
 
-    // 内容缩略名
     private String slug;
 
-    // 内容生成时的GMT unix时间戳
     private Integer created;
 
-    // 内容更改时的GMT unix时间戳
     private Integer modified;
 
-    // 内容文字
-    private String content;
+    private Integer authorId;
 
-    // 内容所属用户id
-    private Integer author_id;
-
-    // 点击次数
-    private Integer hits;
-
-    // 内容类别
     private String type;
 
-    // 标签列表
-    private String tags;
-
-    // 分类列表
-    private String categories;
-
-    // 内容状态
     private String status;
 
-    // 内容所属评论数
-    private Integer comments_num;
+    private String tags;
 
-    // 是否允许评论
-    private Boolean allow_comment;
+    private String categories;
 
-    // 是否允许ping
-    private Boolean allow_ping;
+    private Integer hits;
 
-    // 允许出现在聚合中
-    private Boolean allow_feed;
+    private Integer commentsNum;
 
-    public Contents() {
-    }
+    private Boolean allowComment;
+
+    private Boolean allowPing;
+
+    private Boolean allowFeed;
+
+    private String content;
 
     public Integer getCid() {
         return cid;
@@ -68,7 +46,7 @@ public class Contents  {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public String getSlug() {
@@ -76,7 +54,7 @@ public class Contents  {
     }
 
     public void setSlug(String slug) {
-        this.slug = slug;
+        this.slug = slug == null ? null : slug.trim();
     }
 
     public Integer getCreated() {
@@ -95,20 +73,12 @@ public class Contents  {
         this.modified = modified;
     }
 
-    public String getContent() {
-        return content;
+    public Integer getAuthorId() {
+        return authorId;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Integer getAuthor_id() {
-        return author_id;
-    }
-
-    public void setAuthor_id(Integer author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
     public String getType() {
@@ -116,23 +86,7 @@ public class Contents  {
     }
 
     public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getTags() {
-        return tags;
-    }
-
-    public void setTags(String tags) {
-        this.tags = tags;
-    }
-
-    public String getCategories() {
-        return categories;
-    }
-
-    public void setCategories(String categories) {
-        this.categories = categories;
+        this.type = type == null ? null : type.trim();
     }
 
     public String getStatus() {
@@ -140,39 +94,23 @@ public class Contents  {
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.status = status == null ? null : status.trim();
     }
 
-    public Integer getComments_num() {
-        return comments_num;
+    public String getTags() {
+        return tags;
     }
 
-    public void setComments_num(Integer comments_num) {
-        this.comments_num = comments_num;
+    public void setTags(String tags) {
+        this.tags = tags == null ? null : tags.trim();
     }
 
-    public Boolean getAllow_comment() {
-        return allow_comment;
+    public String getCategories() {
+        return categories;
     }
 
-    public void setAllow_comment(Boolean allow_comment) {
-        this.allow_comment = allow_comment;
-    }
-
-    public Boolean getAllow_ping() {
-        return allow_ping;
-    }
-
-    public void setAllow_ping(Boolean allow_ping) {
-        this.allow_ping = allow_ping;
-    }
-
-    public Boolean getAllow_feed() {
-        return allow_feed;
-    }
-
-    public void setAllow_feed(Boolean allow_feed) {
-        this.allow_feed = allow_feed;
+    public void setCategories(String categories) {
+        this.categories = categories == null ? null : categories.trim();
     }
 
     public Integer getHits() {
@@ -181,5 +119,45 @@ public class Contents  {
 
     public void setHits(Integer hits) {
         this.hits = hits;
+    }
+
+    public Integer getCommentsNum() {
+        return commentsNum;
+    }
+
+    public void setCommentsNum(Integer commentsNum) {
+        this.commentsNum = commentsNum;
+    }
+
+    public Boolean getAllowComment() {
+        return allowComment;
+    }
+
+    public void setAllowComment(Boolean allowComment) {
+        this.allowComment = allowComment;
+    }
+
+    public Boolean getAllowPing() {
+        return allowPing;
+    }
+
+    public void setAllowPing(Boolean allowPing) {
+        this.allowPing = allowPing;
+    }
+
+    public Boolean getAllowFeed() {
+        return allowFeed;
+    }
+
+    public void setAllowFeed(Boolean allowFeed) {
+        this.allowFeed = allowFeed;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 }

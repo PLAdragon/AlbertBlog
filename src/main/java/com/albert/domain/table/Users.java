@@ -1,40 +1,25 @@
 package com.albert.domain.table;
 
-//
-public class Users   {
-
-    // user表主键
+public class Users {
     private Integer uid;
 
-    // 用户名称
     private String username;
 
-    // 用户密码
     private String password;
 
-    // 用户的邮箱
     private String email;
 
-    // 用户的主页
-    private String home_url;
+    private String homeUrl;
 
-    // 用户显示的名称
-    private String screen_name;
+    private String screenName;
 
-    // 用户注册时的GMT unix时间戳
     private Integer created;
 
-    // 最后活动时间
     private Integer activated;
 
-    // 上次登录最后活跃时间
     private Integer logged;
 
-    // 用户组
-    private String group_name;
-
-    public Users() {
-    }
+    private String groupName;
 
     public Integer getUid() {
         return uid;
@@ -49,7 +34,7 @@ public class Users   {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -57,7 +42,7 @@ public class Users   {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getEmail() {
@@ -65,23 +50,23 @@ public class Users   {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
-    public String getHome_url() {
-        return home_url;
+    public String getHomeUrl() {
+        return homeUrl;
     }
 
-    public void setHome_url(String home_url) {
-        this.home_url = home_url;
+    public void setHomeUrl(String homeUrl) {
+        this.homeUrl = homeUrl == null ? null : homeUrl.trim();
     }
 
-    public String getScreen_name() {
-        return screen_name;
+    public String getScreenName() {
+        return screenName;
     }
 
-    public void setScreen_name(String screen_name) {
-        this.screen_name = screen_name;
+    public void setScreenName(String screenName) {
+        this.screenName = screenName == null ? null : screenName.trim();
     }
 
     public Integer getCreated() {
@@ -108,17 +93,11 @@ public class Users   {
         this.logged = logged;
     }
 
-    public String getGroup_name() {
-        return group_name;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setGroup_name(String group_name) {
-        this.group_name = group_name;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName == null ? null : groupName.trim();
     }
-
-	@Override
-	public String toString() {
-		return "Users [uid=" + uid + ", username=" + username + ", password=" + password + "]";
-	}
-    
 }

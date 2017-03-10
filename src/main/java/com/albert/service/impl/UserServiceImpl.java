@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.albert.dao.UserMapper;
+import com.albert.dao.UsersMapper;
 import com.albert.domain.table.Users;
 import com.albert.service.UserService;
 
@@ -21,9 +21,9 @@ import com.albert.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 	@Resource
-	private UserMapper userMapper;
+	private UsersMapper usersMapper;
 	public Users findById(Integer uid) {
-		return userMapper.findById(uid);
+		return null;
 	}
 
 }
