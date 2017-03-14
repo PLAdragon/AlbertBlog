@@ -1,28 +1,17 @@
 package com.albert.domain.table;
 
-// 日志记录对象
-public class Logs{
-
-    // 项目主键
+public class Logs {
     private Integer id;
 
-    // 产生的动作
     private String action;
 
-    // 产生的数据
     private String data;
 
-    // 发生人id
-    private Integer author_id;
+    private Integer authorId;
 
-    // 日志产生的ip
     private String ip;
 
-    // 日志创建时间
     private Integer created;
-
-    public Logs() {
-    }
 
     public Integer getId() {
         return id;
@@ -37,7 +26,7 @@ public class Logs{
     }
 
     public void setAction(String action) {
-        this.action = action;
+        this.action = action == null ? null : action.trim();
     }
 
     public String getData() {
@@ -45,15 +34,15 @@ public class Logs{
     }
 
     public void setData(String data) {
-        this.data = data;
+        this.data = data == null ? null : data.trim();
     }
 
-    public Integer getAuthor_id() {
-        return author_id;
+    public Integer getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor_id(Integer author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
     public String getIp() {
@@ -61,7 +50,7 @@ public class Logs{
     }
 
     public void setIp(String ip) {
-        this.ip = ip;
+        this.ip = ip == null ? null : ip.trim();
     }
 
     public Integer getCreated() {

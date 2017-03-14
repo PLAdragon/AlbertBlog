@@ -1,12 +1,16 @@
 package com.albert.domain.table;
 
-public class Attach  {
-
+public class Attach {
     private Integer id;
+
     private String fname;
+
     private String ftype;
+
     private String fkey;
-    private Integer author_id;
+
+    private Integer authorId;
+
     private Integer created;
 
     public Integer getId() {
@@ -22,7 +26,7 @@ public class Attach  {
     }
 
     public void setFname(String fname) {
-        this.fname = fname;
+        this.fname = fname == null ? null : fname.trim();
     }
 
     public String getFtype() {
@@ -30,7 +34,7 @@ public class Attach  {
     }
 
     public void setFtype(String ftype) {
-        this.ftype = ftype;
+        this.ftype = ftype == null ? null : ftype.trim();
     }
 
     public String getFkey() {
@@ -38,15 +42,15 @@ public class Attach  {
     }
 
     public void setFkey(String fkey) {
-        this.fkey = fkey;
+        this.fkey = fkey == null ? null : fkey.trim();
     }
 
-    public Integer getAuthor_id() {
-        return author_id;
+    public Integer getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor_id(Integer author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
     public Integer getCreated() {

@@ -1,53 +1,33 @@
 package com.albert.domain.table;
 
-//
-public class Comments  {
-
-
-    // comment表主键
+public class Comments {
     private Integer coid;
 
-    // post表主键,关联字段
     private Integer cid;
 
-    // 评论生成时的GMT unix时间戳
     private Integer created;
 
-    // 评论作者
     private String author;
 
-    // 评论所属用户id
-    private Integer author_id;
+    private Integer authorId;
 
-    // 评论所属内容作者id
-    private Integer owner_id;
+    private Integer ownerId;
 
-    // 评论者邮件
     private String mail;
 
-    // 评论者网址
     private String url;
 
-    // 评论者ip地址
     private String ip;
 
-    // 评论者客户端
     private String agent;
 
-    // 评论内容
-    private String content;
-
-    // 评论类型
     private String type;
 
-    // 评论状态
     private String status;
 
-    // 父级评论
     private Integer parent;
 
-    public Comments() {
-    }
+    private String content;
 
     public Integer getCoid() {
         return coid;
@@ -78,7 +58,23 @@ public class Comments  {
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        this.author = author == null ? null : author.trim();
+    }
+
+    public Integer getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
+    }
+
+    public Integer getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Integer ownerId) {
+        this.ownerId = ownerId;
     }
 
     public String getMail() {
@@ -86,7 +82,7 @@ public class Comments  {
     }
 
     public void setMail(String mail) {
-        this.mail = mail;
+        this.mail = mail == null ? null : mail.trim();
     }
 
     public String getUrl() {
@@ -94,7 +90,7 @@ public class Comments  {
     }
 
     public void setUrl(String url) {
-        this.url = url;
+        this.url = url == null ? null : url.trim();
     }
 
     public String getIp() {
@@ -102,7 +98,7 @@ public class Comments  {
     }
 
     public void setIp(String ip) {
-        this.ip = ip;
+        this.ip = ip == null ? null : ip.trim();
     }
 
     public String getAgent() {
@@ -110,15 +106,7 @@ public class Comments  {
     }
 
     public void setAgent(String agent) {
-        this.agent = agent;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+        this.agent = agent == null ? null : agent.trim();
     }
 
     public String getType() {
@@ -126,7 +114,7 @@ public class Comments  {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = type == null ? null : type.trim();
     }
 
     public String getStatus() {
@@ -134,7 +122,7 @@ public class Comments  {
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.status = status == null ? null : status.trim();
     }
 
     public Integer getParent() {
@@ -145,19 +133,11 @@ public class Comments  {
         this.parent = parent;
     }
 
-    public Integer getAuthor_id() {
-        return author_id;
+    public String getContent() {
+        return content;
     }
 
-    public void setAuthor_id(Integer author_id) {
-        this.author_id = author_id;
-    }
-
-    public Integer getOwner_id() {
-        return owner_id;
-    }
-
-    public void setOwner_id(Integer owner_id) {
-        this.owner_id = owner_id;
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 }

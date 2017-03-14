@@ -1,31 +1,19 @@
 package com.albert.domain.table;
 
-//
-public class Metas  {
-
-
-    // 项目主键
+public class Metas {
     private Integer mid;
 
-    // 名称
     private String name;
 
-    // 项目缩略名
     private String slug;
 
-    // 项目类型
     private String type;
 
-    // 选项描述
     private String description;
 
-    // 项目排序
     private Integer sort;
 
     private Integer parent;
-
-    public Metas() {
-    }
 
     public Integer getMid() {
         return mid;
@@ -40,7 +28,7 @@ public class Metas  {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getSlug() {
@@ -48,7 +36,7 @@ public class Metas  {
     }
 
     public void setSlug(String slug) {
-        this.slug = slug;
+        this.slug = slug == null ? null : slug.trim();
     }
 
     public String getType() {
@@ -56,7 +44,7 @@ public class Metas  {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = type == null ? null : type.trim();
     }
 
     public String getDescription() {
@@ -64,7 +52,7 @@ public class Metas  {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description = description == null ? null : description.trim();
     }
 
     public Integer getSort() {
@@ -82,6 +70,4 @@ public class Metas  {
     public void setParent(Integer parent) {
         this.parent = parent;
     }
-
-
 }
